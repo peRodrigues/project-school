@@ -17,13 +17,130 @@ body {
 }
 
 .top-bar {
+  background-color: #f3f3f3;
+}
+.top-bar .aligner {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .external-links {
+  display: flex;
+  align-items: center;
+  height: 44px;
+}
+.top-bar .external-links > a {
+  height: fit-content;
+  line-height: 0;
+  margin-right: 10px;
+}
+.top-bar .external-links > a:hover {
+  opacity: 0.7;
+}
+.top-bar .external-links a {
+  text-decoration: none;
+}
+.top-bar .external-links .logo-globo-svg {
+  width: 75px;
+}
+.top-bar .external-links .more-links li {
+  display: flex;
+  align-items: center;
+}
+.top-bar .external-links .more-links li::before {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background: #ddd;
+  display: block;
+}
+.top-bar .external-links .more-links {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: -0.02rem;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+.top-bar .external-links .more-links a {
+  border-top: 2px solid transparent;
+  padding: 0 10px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  line-height: 1px;
+}
+.top-bar .external-links .more-links li:nth-child(1) a {
+  color: #a80000;
+}
+.top-bar .external-links .more-links li:nth-child(2) a {
+  color: #06aa48;
+}
+.top-bar .external-links .more-links li:nth-child(3) a {
+  color: #ff7f00;
+}
+.top-bar .external-links .more-links li:nth-child(4) a {
+  color: #005cef;
+}
+.top-bar .external-links .more-links li:nth-child(5) a {
+  color: #1e4c9a;
+}
+.top-bar .external-links .more-links li:nth-child(1) a:hover {
+  border-color: #a80000;
+}
+.top-bar .external-links .more-links li:nth-child(2) a:hover {
+  border-color: #06aa48;
+}
+.top-bar .external-links .more-links li:nth-child(3) a:hover {
+  border-color: #ff7f00;
+}
+.top-bar .external-links .more-links li:nth-child(4) a:hover {
+  border-color: #005cef;
+}
+.top-bar .external-links .more-links li:nth-child(5) a:hover {
+  border-color: #1e4c9a;
+}
+.top-bar .user-links {
+  list-style: none;
+  display: flex;
+}
+.top-bar .user-links li {
+  padding: 0 8px;
+}
+.top-bar .user-links a {
+  font-size: 1.27rem;
+  color: #868686;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+.top-bar .user-links a i {
+  font-size: 1rem;
+}
+.top-bar .user-links a.highlight {
+  background: linear-gradient(#fdfdfd, #d8d8d8);
+  color: #5f5d5d;
+  border: 1px solid #ccc;
+  padding: 1px 3px 3px 3px;
+  border-radius: 3px;
+}
+.top-bar .user-links a:hover {
+  color: #1063e0;
+}
+.top-bar .user-links a.highlight i {
+  margin: 0 3px;
 }
 
-.main-header {
+/* .main-header {
 }
 
 .main-container {
 }
 
 .main-footer {
-}
+} */
