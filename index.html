@@ -59,7 +59,7 @@
       <header class="main-header">
         <div class="aligner">
           <section class="menu-btn">
-            <button><i class="fas fa-bars"></i><span>Menu</span></button>
+            <button onclick="mainMenu.show()"><i class="fas fa-bars"></i><span>Menu</span></button>
           </section>
 
           <section class="logo">
@@ -80,20 +80,22 @@
       </header>
 
       <nav class="main-nav">
+        <div class="overlay" onclick="mainMenu.hide()"></div>
+
         <div class="aligner">
           <div class="nav-pages">
-            <div class="nav-page selected">
+            <div class="nav-page selected" id="mainMenuExamplePage1">
               <ul class="links">
-                <li><a href="#">editoriais <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">regiões <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">telejornais <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">globonews <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">editoriais <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">regiões <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">telejornais <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">globonews <i class="fas fa-chevron-right"></i></a></li>
                 <li><a href="#">blogs e colunas</a></li>
-                <li><a href="#">podcasts <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">serviços <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">podcasts <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">serviços <i class="fas fa-chevron-right"></i></a></li>
                 <li><a href="#">vídeos</a></li>
                 <li><a href="#">newsletter</a></li>
-                <li><a href="#">especial publicitário <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage2');">especial publicitário <i class="fas fa-chevron-right"></i></a></li>
               </ul>
   
               <ul class="links">
@@ -118,15 +120,27 @@
               </div>
             </div>
 
-            <div class="nav-page">
-              <button class="back-btn"><i class="fas fa-chevron-left"></i> menu g1</button>
+            <div class="nav-page" id="mainMenuExamplePage2">
+              <button class="back-btn" onclick="mainMenu.selectPage('#mainMenuExamplePage1');"><i class="fas fa-chevron-left"></i> menu g1</button>
 
-              <div class="title">editoriais</div>
+              <div class="title">submenu exemplo 1</div>
 
               <ul class="links">
-                <li><a href="#">agro <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">bem estar <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#">carros</a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage3');">exemplo 1 <i class="fas fa-chevron-right"></i></a></li>
+                <li><a onclick="mainMenu.selectPage('#mainMenuExamplePage3');">exemplo 2 <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#">exemplo 3</a></li>
+              </ul>
+            </div>
+
+            <div class="nav-page" id="mainMenuExamplePage3">
+              <button class="back-btn" onclick="mainMenu.selectPage('#mainMenuExamplePage2');"><i class="fas fa-chevron-left"></i> submenu exemplo 1</button>
+
+              <div class="title">submenu exemplo 2</div>
+
+              <ul class="links">
+                <li><a href="#">exemplo 4</a></li>
+                <li><a href="#">exemplo 5</a></li>
+                <li><a href="#">exemplo 6</a></li>
               </ul>
             </div>
           </div>
@@ -137,5 +151,7 @@
 
       <footer class="main-footer"></footer>
     </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
