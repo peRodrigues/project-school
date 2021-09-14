@@ -16,6 +16,11 @@ body {
 }
 
 body,
+html {
+  height: 100%;
+}
+
+body,
 button,
 input {
   font-family: "Open Sans", sans-serif;
@@ -338,14 +343,13 @@ input {
   left: 0;
   transition: visibility ease 0.4s;
 }
-.main-nav.opened {
-  visibility: visible;
+
+body.main-menu-opened {
+  overflow: hidden;
 }
 
-@media only screen and (max-width: 750px) {
-  .main-nav {
-    font-size: 0.8rem;
-  }
+body.main-menu-opened .main-nav {
+  visibility: visible;
 }
 
 .main-nav .overlay {
@@ -359,7 +363,7 @@ input {
   opacity: 0;
   transition: opacity ease 0.4s;
 }
-.main-nav.opened .overlay {
+body.main-menu-opened .main-nav .overlay {
   opacity: 1;
 }
 
@@ -372,8 +376,9 @@ input {
   left: -272px;
   z-index: 2;
   transition: left ease 0.4s;
+  padding: 0 0 85px 0;
 }
-.main-nav.opened .aligner {
+body.main-menu-opened .main-nav .aligner {
   left: 0;
 }
 
@@ -493,9 +498,67 @@ input {
   vertical-align: middle;
 }
 
-/* 
 .main-container {
+  max-width: 1265px;
+  margin: 35px auto 0 auto;
+  padding: 0px 20px 20px 20px;
 }
+
+.news-master {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  height: 660px;
+}
+.news-master .box {
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+}
+.news-master .box > a {
+  padding: 20px 25px;
+  display: block;
+}
+.news-master .box a {
+  text-decoration: none;
+}
+.news-master .box .subject {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.news-master .box-1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.news-master .box-1 > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 40%;
+}
+.news-master .box-1 .title {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #c4170c;
+  letter-spacing: -1px;
+  line-height: 45px;
+}
+.news-master .box-1 .subtitle {
+  margin-top: 20px;
+  display: block;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+/* 
 
 .main-footer {
 } */

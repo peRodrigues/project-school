@@ -2,11 +2,11 @@ var mainMenu = (function () {
   var mainMenu = {};
 
   mainMenu.show = function () {
-    document.querySelector(".main-nav").classList.add("opened");
+    document.querySelector("body").classList.add("main-menu-opened");
   };
 
   mainMenu.hide = function () {
-    document.querySelector(".main-nav").classList.remove("opened");
+    document.querySelector("body").classList.remove("main-menu-opened");
   };
 
   mainMenu.selectPage = function (element) {
