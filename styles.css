@@ -474,7 +474,12 @@ body.main-menu-opened .main-nav .aligner {
 .main-container {
   max-width: 1265px;
   margin: 35px auto 0 auto;
-  padding: 0px 20px 20px 20px;
+  padding: 0 20px 20px 20px;
+}
+@media only screen and (max-width: 900px) {
+  .main-container {
+    padding: 0 0 20px 0;
+  }
 }
 
 .news-master {
@@ -482,6 +487,7 @@ body.main-menu-opened .main-nav .aligner {
   grid-template-columns: 1fr 1fr;
   grid-gap: 12px;
   height: 660px;
+  margin-bottom: 50px;
 }
 .news-master .box {
   border-radius: 4px;
@@ -598,36 +604,80 @@ body.main-menu-opened .main-nav .aligner {
 
 .news-list {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 7fr 3fr;
+  grid-column-gap: 25px;
 }
 .news-list a {
   text-decoration: none;
 }
-.news-list > ul {
+.news-list ul {
   list-style: none;
 }
 .news-list > ul > li {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(0%, max-content));
   grid-column-gap: 15px;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .news-list > ul .image {
-  grid-row: 1 / 5;
+  grid-column: 1;
+  grid-row: 1 / 6;
+  display: block;
+  max-width: 370px;
+}
+.news-list > ul .image a {
+  display: block;
+}
+.news-list > ul .image img {
+  width: 100%;
+  display: block;
+}
+.news-list > ul .header {
+  grid-column: 2;
+}
+.news-list > ul .subject {
+  grid-column: 2;
+  margin-bottom: 2px;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .news-list > ul .title {
+  grid-column: 2;
+  margin-top: 10px;
+}
+.news-list > ul .title a {
   color: #c4170c;
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: -1.3px;
   line-height: 28px;
   display: block;
-  margin: 15px 0 10px 0;
+}
+.news-list > ul .title a:hover {
+  color: #a6130a;
+}
+.news-list > ul .brief {
+  grid-column: 2;
+  color: #555;
+  font-size: 1.6rem;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  margin: 10px 0 10px 0;
 }
 .news-list > ul .related {
+  grid-column: 2;
+  margin: 10px 0;
+}
+.news-list > ul .related ul {
   list-style: disc;
-  list-style-position: inside;
   color: #999;
   font-size: 1.2rem;
+  margin: 0;
+  padding: 0 15px;
 }
 .news-list > ul .related a {
   text-decoration: none;
@@ -635,7 +685,94 @@ body.main-menu-opened .main-nav .aligner {
   font-weight: 400;
   color: #c4170c;
 }
+.news-list > ul .related a:hover {
+  color: #a6130a;
+}
 .news-list > ul .time {
+  grid-column: 2;
+  color: #555;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 900px) {
+  .news-list {
+    display: block;
+  }
+  .news-list > ul > li {
+    display: block;
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 0px 4px #d5d5d5;
+    margin-bottom: 20px;
+  }
+  .news-list > ul .subject,
+  .news-list > ul .title,
+  .news-list > ul .brief,
+  .news-list > ul .related,
+  .news-list > ul .time {
+    padding: 0 15px;
+  }
+  .news-list > ul .image {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+}
+
+.news-list > aside .box {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+  margin-bottom: 15px;
+}
+.news-list > aside .box > h2 {
+  padding: 15px 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 1px solid #eeeeee;
+}
+.news-list > aside .box > ul {
+  padding: 0 25px;
+}
+.news-list > aside .box > ul > li {
+  padding: 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.news-list > aside .box > ul > li:last-child {
+  border-bottom: none;
+}
+.news-list > aside .box > ul .title > a {
+  color: #c4170c;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 20px;
+  display: block;
+}
+.news-list > aside .box > ul .title > a:hover {
+  color: #a6130a;
+}
+.news-list > aside .box > ul .title > span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+.news-list > aside .box > ul .image {
+  width: 94px;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+.news-list > aside .box > ul .image a {
+  display: block;
+}
+.news-list > aside .box > ul .image img {
+  display: block;
+  width: 100%;
 }
 
 /* 
