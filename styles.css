@@ -218,6 +218,10 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.main-header .aligner > section {
+  /* text-align: center;
+  width: 30%; */
+}
 .main-header .menu-btn > button {
   font-weight: 600;
   background: none;
@@ -621,6 +625,9 @@ body.main-menu-opened .main-nav .aligner {
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
+.news-list > ul > li:last-child {
+  border-bottom: none;
+}
 .news-list > ul .image {
   grid-column: 1;
   grid-row: 1 / 6;
@@ -646,7 +653,7 @@ body.main-menu-opened .main-nav .aligner {
 }
 .news-list > ul .title {
   grid-column: 2;
-  margin-top: 10px;
+  margin: 10px 0 15px 0;
 }
 .news-list > ul .title a {
   color: #c4170c;
@@ -670,14 +677,13 @@ body.main-menu-opened .main-nav .aligner {
 }
 .news-list > ul .related {
   grid-column: 2;
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 }
 .news-list > ul .related ul {
   list-style: disc;
   color: #999;
   font-size: 1.2rem;
-  margin: 0;
-  padding: 0 15px;
+  list-style-position: inside;
 }
 .news-list > ul .related a {
   text-decoration: none;
@@ -692,6 +698,7 @@ body.main-menu-opened .main-nav .aligner {
   grid-column: 2;
   color: #555;
   font-size: 1.2rem;
+  margin-top: 5px;
 }
 @media only screen and (max-width: 900px) {
   .news-list {
