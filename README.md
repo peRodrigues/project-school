@@ -1,4 +1,4 @@
-# Learning - Clone - G1
+# Learning - HTML, CSS and JavaScript
 
 :us: Clone from the home page of the news site g1.globo.com, made to practice HTML, CSS and JavaScript.
 
